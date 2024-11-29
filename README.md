@@ -1,5 +1,5 @@
 # The Impact of Mental Health on Physical Wellness: Insights from the 1972-2022 U.S. General Social Surveys
-##Gender Disparities and the Overlooked Impact of Mental Illness in the Medical Field
+## Gender Disparities and the Overlooked Impact of Mental Illness in the Medical Field
 
 ## Overview
 This paper investiages how mental health, though a relatively recent focus in research, has raised questions about its potential impact on physical health. This study examines the relationship between mental and physical health by analyzing data from the U.S. General Social Survey (GSS) spanning 1972 to 2022. Specifically, it explores the influence of mental health issues on the frequency of physical health problems, measured by the number of reported days of feeling unwell each month. The research findings suggest that poor mental health is associated with an increase in physical health issues, with notable disparities across demographic groups, particularly affecting women. These results highlight the critical need to prioritize mental health and advocate for greater support for underrepresented groups within healthcare.
