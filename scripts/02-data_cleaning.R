@@ -121,8 +121,9 @@ mentalVsHealth_data <- filter(GSS, ment_days >= 0) %>% filter(health >= 0)
 mentalVsHealth_data  <- select(mentalVsHealth_data, c("id", "ment_days", "health"))
 
 #### Save data ####
-write_parquet(GSS, here::here("data/analysis_data/cleaned_GSS.parquet"))
-write_parquet(demo_data, here::here("data/analysis_data/demo_data.parquet"))
-write_parquet(days_data, here::here("data/analysis_data/days_data.parquet"))
-write_parquet(analysis_data, here::here("data/analysis_data/analysis_data.parquet"))
-write_parquet(mentalVsHealth_data, here::here("data/analysis_data/mentalVsHealth_data.parquet"))
+write_parquet(GSS, here::here("C:/Users/gthin/OneDrive/Documents/final/cleaned_GSS.parquet"))
+write_parquet(demo_data, here::here("C:/Users/gthin/OneDrive/Documents/final/demo_data.parquet"))
+write_parquet(days_data, here::here("C:/Users/gthin/OneDrive/Documents/final/days_data.parquet"))
+write_parquet(analysis_data, here::here("C:/Users/gthin/OneDrive/Documents/final/analysis_data.parquet"))
+write_parquet(mentalVsHealth_data, here::here("C:/Users/gthin/OneDrive/Documents/final/mentalVsHealth_data.parquet"))
+
