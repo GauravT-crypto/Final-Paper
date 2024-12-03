@@ -14,11 +14,11 @@
 library(tidyverse)
 library(arrow)
 
-GSS <- read_parquet(here::here("data/analysis_data/cleaned_GSS.parquet"))
-demo_data <- read_parquet(here::here("data/analysis_data/demo_data.parquet"))
-days_data <- read_parquet(here::here("data/analysis_data/days_data.parquet"))
-depress_data <- read_parquet(here::here("data/analysis_data/depress_data.parquet"))
-mentalVsHealth <- read_parquet(here::here("data/analysis_data/mentalVsHealth_data.parquet"))
+GSS <- read_parquet("C:/Users/gthin/OneDrive/Documents/final/cleaned_GSS.parquet")
+demo_data <- read_parquet("C:/Users/gthin/OneDrive/Documents/final/demo_data.parquet")
+days_data <- read_parquet("C:/Users/gthin/OneDrive/Documents/final/days_data.parquet")
+analysis_data <- read_parquet("C:/Users/gthin/OneDrive/Documents/final/analysis_data.parquet")
+mentalVsHealth <- read_parquet("C:/Users/gthin/OneDrive/Documents/final/mentalVsHealth_data.parquet")
 
 #### Test data ####
 # expected that id is only from 1 to 72390
