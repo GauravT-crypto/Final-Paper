@@ -40,7 +40,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)  # Reset k
 #| warning: false
 #| message: false
 
-#download the packages if necessary, then load the packages
+# download and then load packages
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(janitor, here, dplyr, tidyverse, knitr, kableExtra, ggplot2, arrow, ggpmisc)
 
@@ -142,10 +142,10 @@ demo_data |>
 
 # Histogram for Physical Health Issues
 demo_data |>
-  ggplot(aes(x = phys_days, fill = age_cohort)) +  # Use 'age_cohort' for filling the bars
+  ggplot(aes(x = phys_days, fill = age_cohort)) +  
   geom_histogram(position = "dodge") +
   theme_minimal() +
-  scale_fill_brewer(palette = "Set2") +  # Changed color palette to 'Set2'
+  scale_fill_brewer(palette = "Set2") +  
   labs(
     x = "Number of Days Feeling Physically Unwell in the Last 30 Days",
     y = "Frequency",
@@ -516,22 +516,21 @@ However, the strength of the relationship is relatively weak ($\beta_1 = 0.03$, 
 #| warning: false
 #| message: false
 
-#Graph
+# Graph
 mentalVsHealth |> 
   ggplot(aes(x = ment_days, y = health)) + 
   geom_point(color = "#4787ff", size = 3, alpha = 0.7) + # Change point color and transparency
-  geom_smooth(method = "lm", se = FALSE, color = "darkblue", linetype = "dashed", size = 1.2) + # Customize line
+  geom_smooth(method = "lm", se = FALSE, color = "darkblue", linetype = "dashed", size = 1.2) + 
   stat_poly_line(color = "red") + # Customize polynomial line
   stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
-               formula = y ~ poly(x, 2), parse = TRUE, size = 5) + # Add custom equation label
-  theme_classic() + # Change theme
-  labs(x = "Mental Unwellness (Days)", y = "General Health (Score)") + # More descriptive axis labels
+               formula = y ~ poly(x, 2), parse = TRUE, size = 5) + 
+  theme_classic() + 
+  labs(x = "Mental Unwellness (Days)", y = "General Health (Score)") +
   scale_color_brewer(palette = "Set3") + # Different color palette
   theme(legend.position = "none", 
         plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
         axis.title = element_text(size = 12, face = "italic"),
-        axis.text = element_text(size = 10)) # Customize text appearance
-
+        axis.text = element_text(size = 10))
 ```
 
 \break
@@ -551,22 +550,22 @@ The lack of significance for depression diagnosis could be due to potential erro
 #| warning: false
 #| message: false
 
-#Graph
+# Graph
 analysis_data |> 
   ggplot(aes(x = ment_days, y = phys_days, color = factor(depress))) + 
-  geom_point(size = 3, alpha = 0.7) + # Points with transparency
+  geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", aes(group = factor(depress), color = factor(depress)), 
-              se = FALSE, linetype = "solid", size = 1.2) + # Separate lines for 'depress' categories, each with its own color
-  stat_poly_line(aes(group = factor(depress), color = factor(depress)), size = 1.2) + # Polynomial lines for each group
+              se = FALSE, linetype = "solid", size = 1.2) + 
+  stat_poly_line(aes(group = factor(depress), color = factor(depress)), size = 1.2) +
   stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~"), color = factor(depress)), 
-               formula = y ~ poly(x, 2), parse = TRUE, size = 5) + # Polynomial equation for each group
+               formula = y ~ poly(x, 2), parse = TRUE, size = 5) + 
   theme_light() + # Lighter theme for contrast
   labs(x = "Mental Unwellness (Days)", y = "Physical Unwellness (Days)", color = "Depression Diagnosis") + 
-  scale_color_manual(values = c("No" = "steelblue", "Yes" = "tomato")) + # Different colors for 'Yes' and 'No' categories
+  scale_color_manual(values = c("No" = "steelblue", "Yes" = "tomato")) + 
   theme(legend.position = "top", 
         plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
         axis.title = element_text(size = 12, face = "italic"),
-        axis.text = element_text(size = 10)) # Adjust text size and style
+        axis.text = element_text(size = 10)) 
  
 ```
 
