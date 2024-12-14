@@ -20,4 +20,4 @@ Due to licensing and copyright restrictions, only partial raw data from the U.S.
 
 
 ## Statement on LLM usage
-No LLMs were used for this analysis
+No LLMs were used for this analysis.
